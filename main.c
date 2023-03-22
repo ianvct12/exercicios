@@ -2194,6 +2194,343 @@ int main(void){
 //   return 0;
 // }
 
+//1- Escreva um algoritmo para ler o raio de um círculo, calcular e escrever a sua área. 
+
+// #include <stdio.h>
+
+// int main(void) {
+//   float area,raio;
+
+//   printf("Digite o raio do círculo: ");
+//   scanf("%f",&raio);
+
+//   area=3.14*(raio*raio);
+
+//   printf("A área do círculo é:%.2f",area);
+//   return 0;
+// }
+
+
+//2-Escreva um programa para ler um valor inteiro e mostrar ao usuário qual é o antecessor e sucessor do número informado.
+// #include<stdio.h>
+
+// int main(void){
+// int valor;
+
+//   printf("Digite um valor inteiro: ");
+//   scanf("%d",&valor);
+
+// printf("O sucessor do número é:%d; O antecessor do número é: %d",valor+1,valor-1);
+//   return 0;
+// }
+
+
+
+
+
+// 3-As maçãs custam R$ 2,30 se forem compradas menos do que uma dúzia, e R$ 2,05 se forem compradas pelo menos doze. Escreva um algoritmo que leia o número de maçãs compradas, calcule e escreva o valor total da compra.
+
+// #include<stdio.h>
+
+// int main(void){
+// int numeroTotal=0;
+// float valorTotal=0,precoMaca=0;
+
+//   printf("Digite quantas maçãs você deseja comprar: ");
+//   scanf("%d",&numeroTotal);
+
+//   if(numeroTotal<12){
+//     precoMaca=2.30;
+//   }else if(numeroTotal>=12){
+//     precoMaca=2.05;
+//   }
+  
+//   valorTotal=precoMaca*numeroTotal;
+
+//   printf("O número de maçãs compradas foi de: %d; O valor total da compra foi de:%.2f",numeroTotal,valorTotal);
+
+//   return 0;
+// }
+
+
+// 4-Escreva um algoritmo para ler um número inteiro (considere que serão lidos apenas valores positivos e inteiros) e escrever se é par ou ímpar.
+
+// #include<stdio.h>
+
+// int main(void){
+
+// int numero=0,par=0,impar=0;
+
+//   printf("Digite um número inteiro e positivo: ");
+//   scanf("%d",&numero);
+
+//   if(numero%2==0){
+//     printf("Esse número é par");
+//   }else{
+//     printf("Esse número é ímpar");
+//   }
+//   return 0;
+// }
+
+// 5-Escreva um algoritmo para ler 2 valores (considere que não serão lidos valores iguais) e escrevê-los em ordem crescente.
+
+
+// #include<stdio.h>
+
+// int main(void){
+
+//   int n1=0,n2=0;
+
+//   printf("Digite um valor: ");
+//   scanf("%d",&n1);
+
+//   printf("Digite um valor: ");
+//   scanf("%d",&n2);
+
+//   if(n1>n2){
+//     printf("Ordem crescente: %d > %d",n1,n2);
+//   }else{
+//     printf("Ordem crescente: %d > %d",n2,n1);
+//   }
+//   return 0;
+// }
+
+// 6-Escreva um algoritmo para ler as notas da 1a . e 2a . avaliações de um aluno, calcule e imprima a média semestral. Só deve aceitar valores válidos (0 a 10) para cada nota.
+
+// #include<stdio.h>
+
+// int main(void){
+
+// float av1=0,av2=0,media=0;
+// do{
+//   printf("Digite a nota da av1: ");
+//   scanf("%f",&av1);
+
+//   printf("Digite a nota da av2: ");
+//   scanf("%f",&av2);  
+
+//   if(av1<0||av1>10||av2<0||av2>10){
+//     printf("Esse valor é inválido. Digite um valor válido!\n");
+//   }
+// }while(av1<0||av1>10||av2<0||av2>10);
+
+//   media=(av1+av2)/2;
+
+//   printf("A média semestral é de:%.2f",media);
+//   return 0;
+// }
+
+
+// 7-Faça um programa que calcule e escreva o valor de S:
+
+// #include<stdio.h>
+
+// int main(void){
+
+// float s=0,i=0;
+
+
+// s=1;
+
+// for(i=2;i<=1000;i++){
+//   s=s+1/i;
+
+// }
+//   printf("%.2f",s);
+//   return 0;
+// }
+
+// 8 - Elabore um programa em C que imprima na tela a quantidade de múltiplos de 5 que foram digitados em uma coleção de 15 elementos. 
+
+
+// #include<stdio.h>
+
+// int main(void){
+// int n[15];
+// int i=0;
+// int contador=0;
+
+//   for(i=0;i<15;i++){
+//     printf("Digite o número: ");
+//     scanf("%d",&n[i]);
+
+//     if(n[i]%5==0){
+//       contador++;
+//     }
+//   }
+
+//   printf("A quantidade de elementos múltiplos de 5 é de :%d",contador);
+//   return 0;
+// }
+
+//9-Imprima todos os números de 100 até 1. 
+
+// #include<stdio.h>
+
+// int main(void){
+// int i=0;
+
+//   for(i=100;i>0;i--){
+//     printf("%d\n",i);
+//   }
+//   return 0;
+// }
+
+// 10-Faça um programa que leia um número e imprima os números de 1 a num e o seu somatório. 
+
+// #include<stdio.h>
+
+// int main(void){
+// int i=0,n=0,total=0;
+
+//   printf("Digite um número: ");
+//   scanf("%d",&n);
+
+//   for(i=1;i<=n;i++){
+//     total=i+total;
+//     printf("%d\n",i);
+//   }
+//   printf("O somatório total deles é:%d",total);
+//   return 0;
+// }
+
+
+// 11- Faça um programa que imprima a soma dos números pares entre 15 e 100.
+
+// #include<stdio.h>
+
+// int main(void){
+// int i=0,n=0,totalPar=0;
+
+//   for(i=15;i<=100;i++){
+//     if(i%2==0){
+//       totalPar=i+totalPar;
+//     }
+//   }
+//   printf("%d",totalPar);
+//   return 0;
+// }
+
+
+//12-Entrar com 10 números e imprimir a metade de cada número. 
+
+// #include<stdio.h>
+
+// int main(void){
+// int n[10],i=0,metade=0;
+
+
+// for(i=0;i<10;i++){
+//   printf("Digite dez números: ");
+//   scanf("%d",&n[i]);
+//   metade=n[i]/2;
+//   printf("A metade do número digitado é: %d\n",metade);
+// }
+ 
+//   return 0;
+// }
+
+// 13-Entrar com 12 números e imprimir a média desses números. 
+
+// #include<stdio.h>
+
+// int main(void){
+
+// int n[12],i=0;
+// float media=0,total=0;
+//   for(i=0;i<12;i++){
+//   printf("Digite doze números: ");
+//   scanf("%d",&n[i]);
+
+//   total=n[i]+total;
+//   }
+//  media=total/i;
+
+//   printf("A média dos números é de:%f",media);
+//   return 0;
+// }
+
+// 14-Faça um programa em C que receba via teclado os valores das variáveis existentes na expressão abaixo e imprima o resultado:
+// ((x – 5) * y) – z
+
+// #include<stdio.h>
+
+// int main(void){
+
+//   int x=0,z=0,y=0,resultado=0;
+
+// printf("Digite o valor de X: ");
+// scanf("%d",&x);
+
+// printf("Digite o valor de Y: ");
+// scanf("%d",&y);
+
+// printf("Digite o valor de Z: ");
+// scanf("%d",&z);
+
+// resultado=((x-5)*y)-z;
+  
+// printf("O resultado da expressão ((%d-5)*%d)-%d é igual:%d",x,y,z,resultado);
+//   return 0;
+// }
+
+
+// 15-Faça um programa que leia uma sequência de 10 números e informe o total de ocorrências do último número lido. Exemplo: supondo a seguinte sequência de números 38 4 23 5 6 7 4 12 4 O resultado será: O número 4 apareceu 3 vezes.
+
+// #include<stdio.h>
+
+// int main(void){
+
+// int n[10],i=0,contador=0;
+
+// for(i=0;i<10;i++){
+//   printf("Digite dez números: ");
+//   scanf("%d",&n[i]);
+//   }
+
+// for(i=0;i<10;i++){
+//   if(n[i]==n[9]){
+//     contador++;
+//   }
+// }
+//   printf("A quantidade de números %d repetidos foi de:%d",n[9],contador);
+//return 0;
+// }
+
+
+// 16-Escrever um programa que declara e lê um vetor int com 10 elementos. Exibir a diferença entre o maior e o menor valor armazenado no vetor.
+
+// #include<stdio.h>
+
+// int main(void){
+// int n[10],i=0,maior=0,menor=0,diferenca=0;
+
+// for(i=0;i<10;i++){
+//   printf("Digite dez números: ");
+//   scanf("%d",&n[i]);
+//   }
+
+// for(i=0;i<10;i++){
+//   if(n[i]>maior){
+//  maior=n[i];
+//   }else if(n[i]<menor){
+//     menor=n[i];
+//   }
+// }
+//   diferenca=maior-menor;
+
+//   printf("A diferença entre o maior(%d) e o menor(%d) número é de:%d",maior,menor,diferenca);
+//   return 0;
+// }
+
+
+
+
+
+
+
+
+
 
 // 1-Dada uma matriz Amxn, imprimir o número de linhas e o número de colunas nulas da matriz.
 
