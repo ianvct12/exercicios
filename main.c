@@ -2195,3 +2195,231 @@ int main(void){
 // }
 
 
+// 1-Dada uma matriz Amxn, imprimir o número de linhas e o número de colunas nulas da matriz.
+
+// Exemplo: m = 4 e n = 4
+
+// #include <stdio.h>
+
+// int main(void) {
+//  int mat[4][4]={{1,0,2,3},{4,0,5,6},{0,0,0,0},{0,0,0,0}};
+//   int i=0,j=0,linhaNula=0, colunaNula=0;
+  
+  
+
+
+//     // Contagem das linhas nulas
+//     for(i = 0; i <4; i++) {
+//         int soma = 0;
+//         for(j = 0; j <4; j++) {
+//             soma += mat[i][j];
+//         }
+//         if(soma == 0) {
+//             linhaNula++;
+//         }
+//     }
+
+//     // Contagem das colunas nulas
+//     for(j = 0; j < 4; j++) {
+//         int soma = 0;
+//         for(i = 0; i < 4; i++) {
+//             soma += mat[i][j];
+//         }
+//         if(soma == 0) {
+//             colunaNula++;
+//         }
+//     }
+// printf("O número de colunas nulas é de: %d; O número de linhas nulas é de:%d.",colunaNula,linhaNula);
+    
+//   return 0;
+// }
+
+
+
+
+// 2-Os elementos aij de uma matriz inteira Anxn representam os custos de transporte da cidade i para a cidade j. Dados n itinerários, cada um com k cidades, calcular o custo total para cada itinerário.
+
+// #include<stdio.h>
+
+// int main(void){
+
+// int i=0,j=0,mat[i][j],n=0,k=0;
+
+  
+//   return 0;
+// }
+
+
+
+
+
+//3. Escreva uma função que recebe como parâmetro um inteiro positivo ano e devolve 1 se ano for bissexto, 0 em caso contrário. (Um ano é bissexto se (ano % 4 == 0 && (ano % 100 != 0 || ano % 400 == 0)).)
+//#include <stdio.h>
+
+// int function(int ano, int mes, int vida){
+//   int somar=(365*ano)+(30*mes)+(vida);
+//   return somar;
+// }
+
+// int main(void){
+//   int ano,mes,dia;
+  
+//   printf("Coloque os anos de sua vida: ");
+//   scanf("%d",&ano);
+
+//   printf("Coloque os meses de sua vida: ");
+//   scanf("%d",&mes);
+
+//   printf("Coloque os dias de sua vida: ");
+//   scanf("%d",&dia);
+  
+//   printf("A quantidade de dias vividos foi de:%d",function(ano,mes,dia));
+// }
+
+
+
+
+// 4. Escreva um programa que leia um inteiro não-negativo n e imprima a soma dos n primeiros números primos.
+
+//#include <stdio.h>
+
+// int function(int n){
+//   int i=0,total=0;
+//   for(i=1;i<n;i++){
+//     if(n%i==0){
+//       total++;
+//     }
+//   }
+//   return total;
+// }
+// int main(void){
+//   int n=0,soma=0;
+
+//   while(n!=-1){
+//   printf("Escreva um número inteiro não negativo: ");
+//   scanf("%d",&n);
+//     if(function(n)==1){
+//       soma=n+soma;
+//     }
+//   }
+  
+// printf("O total da soma dos números primos é:%d",soma);
+
+  
+// }
+
+
+//5. Escreva um programa para ler dois vetores v e w de 10 componentes cada, e calcular e escrever a soma dos produtos dos respectivos componentes de v e w, através da utilização de uma função.
+
+
+// #include<stdio.h>
+
+// int function(int v[10],int w[10]){
+//   int soma=0;
+//   int produtoV=1;
+//   int produtoW=1;
+//   int i=0;
+  
+//   for(i=0;i<10;i++){
+//   produtoV=v[i]*produtoV;
+// }
+
+//   for(i=0;i<10;i++){
+//   produtoW=w[i]*produtoW;
+// }
+// soma=produtoV+produtoW;
+  
+//   return soma;
+// }
+
+// int main(void){
+
+// int v[10],w[10],i=0;
+
+//   //salvar dados no v
+// for(i=0;i<10;i++){
+//   printf("Digite o elemento [%d] para o vetor v: ",i);
+//   scanf("%d",&v[i]);
+// }
+// //salvar dados no w
+//   for(i=0;i<10;i++){
+//   printf("Digite o elemento [%d] para o vetor w: ",i);
+//   scanf("%d",&w[i]);
+// }
+
+//   printf("A soma dos produtos dos elementos dos vetores é de :%d",function(v,w));
+
+  
+//   return 0;
+// }
+
+
+//6. Escreva um programa para ler um vetor v de inteiros de 100 componentes e realizar uma busca neste vetor, informando se um elemento que se deseja encontrar, foi ou não encontrado no vetor e em que posição. Faça uma função para a busca que receba o vetor, o número de elementos do vetor e o valor a ser procurado. Ela deverá retornar o índice (sucesso na busca) ou -1 (fracasso na busca).
+
+// #include <stdio.h>
+
+// int function(int *v,int tamanho, int valor){
+  
+//   for(int i=0;i<tamanho;i++){
+//     if(valor == v[i]){
+//        return valor;
+//     }
+// }
+//   return -1;
+// } 
+
+// int main(void){
+//   int v[100],i=0,valor,n;
+
+//   for(i=0;i<100;i++){
+//    v[i]=i;
+//     printf("%d\n",v[i]);
+//   }
+  
+//   printf("Digite o valor a ser procurado: ");
+//   scanf("%d",&valor);
+
+//   n=function(v,100,valor);
+
+//   printf("%d",n);
+
+//   return 0;
+// }
+
+// #include <stdio.h>
+
+// int buscar(int *v, int n, int x) {
+//     int i;
+//     for (i = 0; i < n; i++) {
+//         if (x == v[i]) {
+//             return x;
+//         }
+//     }
+//     return -1;
+// }
+
+// int main() {
+//     int v[100];
+//     int n, x, posicao;
+
+//     // Leitura do vetor
+//     for(int i=0;i<100;i++){
+//       v[i]=i;
+//     }
+
+//     // Leitura do valor a ser procurado
+//     printf("Digite o valor a ser procurado: ");
+//     scanf("%d", &x);
+
+//     // Busca do elemento no vetor
+//     posicao = buscar(v, 100, x);
+
+//     // Exibição do resultado da busca
+//     if (posicao == -1) {
+//         printf("O valor %d não foi encontrado no vetor.\n", x);
+//     } else {
+//         printf("O valor %d foi encontrado na posicao %d do vetor.\n", x, posicao);
+//     }
+
+//     return 0;
+// }
