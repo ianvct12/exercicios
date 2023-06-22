@@ -2760,3 +2760,978 @@ int main(void){
 
 //     return 0;
 // }
+
+
+
+
+// 1-Faça uma função que receba dois números positivos por
+// parâmetro e retorne a soma dos N números inteiros existentes entre
+// eles.
+// #include<stdio.h> 
+
+// int soma(int n1, int n2);
+
+// int main(void){
+// int n1,n2;
+//   printf("Digite um número: ");
+//   scanf("%d",&n1);
+
+//   printf("Digite um outro número: ");
+//   scanf("%d",&n2);
+
+//   printf("O resultado da soma é:%d", soma(n1,n2));
+//   return 0;
+// }
+
+// int soma(int n1, int n2){
+//   int soma=0, i=0;
+
+//   for(i=n1+1;i<n2;i++){
+//     soma=i+soma;
+//   }
+//   return soma;
+// }
+// 2-Faça uma função que receba três notas de um aluno com
+// parâmetros e uma letra. Se a letra for A o procedimento calcula a
+// média das notas do aluno, se for P o procedimento calcula a média
+// ponderada com pesos 5,3 e 2. A média calculada deve ser devolvida
+// ao programa principal para, então ser mostrada.
+
+// #include<stdio.h> 
+
+// float media(float n1, float n2, float n3, char letra);
+
+// int main(void){
+// float n1,n2,n3;
+// char letra;
+//   printf("Digite uma nota: ");
+//   scanf("%f",&n1);
+
+//   printf("Digite outra nota: ");
+//   scanf("%f",&n2);
+
+//   printf("Digite outra nota: ");
+//   scanf("%f",&n3);
+
+//   printf("Digite uma letra- A ou P :");
+//   scanf(" %c",&letra);
+
+//   printf("A média do aluno é:%.2f",media(n1,n2,n3,letra));
+//   return 0;
+// }
+
+// float media(float n1, float n2, float n3, char letra){
+//   float media=0;
+//   if(letra=='A'){
+//     media=(n1+n2+n3)/3;
+
+//   }else if(letra=='P'){
+//     media=(n1*5 + n2*3 + n3*2)/10;
+//   }
+//   return media;
+// }
+
+
+
+// 3-Escreva uma função potenciaInt(base, expoente) que retorne o
+// valor de baseexpoente. Não use nenhuma das funções da biblioteca
+// matemática.
+
+// #include<stdio.h> 
+// int pot(int base, int expo);
+
+// int main(void){
+//   int base,expo;
+//   printf("Digite uma base: ");
+//   scanf("%d",&base);
+
+//   printf("Digite um expoente: ");
+//   scanf("%d",&expo);
+
+//   printf("%d",pot(base,expo));
+// }
+// int pot(int base, int expo){
+//   int i=0, potencia=1;
+//   for(i=0;i<expo;i++){
+//     potencia=potencia*base;
+//   }
+//   return potencia;
+// }
+
+
+
+// 4-Escreva uma função omega(int n) que retorne a soma dos
+// divisores de n exceto ele próprio. Exemplo: omega(15) = 1+3+5 = 9
+
+// Usando a função omega solicitada acima, escreva um programa
+// que imprima todos os números primos entre 2 e 10000.
+// #include<stdio.h>
+// int omega(int n);
+
+// int main(void){
+// int i=0,n=0;
+
+//   for(i=2;i<1000;i++){
+//     if(omega(i)==1){
+//       printf("%d\n",i);
+//     }
+//   }
+//   return 0;
+// }
+
+// int omega(int n){
+//   int i=0,soma=0;
+//   for(i=1;i<n;i++){
+//   if(n%i==0){
+//     soma=i+soma;
+//   }
+//   }
+//     return soma;
+// }
+
+
+// #include<stdio.h>
+// int omega(int n);
+
+// int main(void){
+// int i=0,n=0;
+
+// printf("Digite um número: ");
+// scanf("%d",&n);
+
+// if(omega(n)==1){
+//   printf("Número primo!");
+// }else{
+//   printf("Não é número primo!");
+// }
+//   return 0;
+// }
+
+// int omega(int n){
+//   int i=0,qtd=0,num=0;
+//   for(i=1;i<n;i++){
+//   if(n%i==0){
+//   qtd++;
+//   }
+//   }
+//     if(qtd==1){
+//      return 1;
+//     }
+//     else{
+//       return 0;
+//     }
+
+// }
+
+
+// Crie um programa que receba 2 valores e realize as operações de
+// soma e subtração com a utilização de ponteiros. Mostrar os valores
+// dos ponteiros ao final.
+// #include<stdio.h>
+// int main(void){
+//   int n1,n2,*p,*p2;
+//   p=&n1;
+//   p2=&n2;
+//   printf("Digite um valor: ");
+//   scanf("%d",p);
+//   printf("Digite outro valor: ");
+//   scanf("%d",p2);
+
+//   printf("Soma:%d; Sub:%d",*p+*p2,*p-*p2);
+// }
+
+// Crie um programa que leia uma variável a e um ponteiro pa que aponta para a. Leia também uma variável b e um
+// ponteiro pb que aponta para b. Utilizando os ponteiros ( e variável auxiliar), troque os valores das variáveis.
+
+// #include<stdio.h>
+
+// int main(void){
+//   int a,b, *pa,*pb,aux;
+//   pa=&a;
+//   pb=&b;
+  
+// printf("Digite um valor para A: ");
+// scanf("%d",pa);
+
+// printf("Digite um valor para B: ");
+// scanf("%d",pb);
+
+// aux=*pa;
+// *pa=*pb;
+// *pb=aux;
+
+// printf("Valor de A:%d ; Valor de B: %d",*pa,*pb);
+//   return 0;
+// }
+
+// #include<stdio.h>
+
+// int contaLetra(char *s);
+
+// int main(){
+
+// char palavra[50] = "frase de teste";
+
+// printf("\ntem : %d letras \n",contaLetra(palavra));
+// return 0;
+
+// }
+
+// int contaLetra(char * s){
+//   int i=0;
+//   while(*s!='\0'){
+//     s++;
+//     i++;
+//   }
+//   return i;
+// }
+
+
+// Criar um programa para receber 5 valores e apresentar o
+// maior e o menor valor informado. Utilize uma função e
+// ponteiros para identificar o maior e o menor valor do vetor.
+// void maiorMenor(int *vet, int *maior, int *menor);
+
+// #include<stdio.h>
+// int main(void){
+//   int vet[5],i=0,maior=0,menor=0;
+
+//   for(i=0;i<5;i++){
+//     printf("Digite um valor: ");
+//     scanf("%d",&vet[i]);
+//   }
+
+//   maior=vet[0];
+//   menor=vet[0];
+//   maiorMenor(vet,&maior,&menor);
+
+//   printf("O maior valor foi:%d. O menor valor foi:%d",maior,menor);
+  
+//   return 0;
+// }
+
+// void maiorMenor(int *vet, int *maior, int *menor){
+//   int i=0;
+//   for(i=0;i<5;i++){
+//     if(vet[i]>*maior){
+//       *maior=vet[i];
+//     }else if(vet[i]<*menor){
+//       *menor=vet[i];
+//     }
+//   }
+// }
+
+
+// Escreva uma função que recebe como parâmetro
+// um inteiro positivo ano e devolve 1 se ano for
+// bissexto, 0 em caso contrário. (Um ano é bissexto
+// se (ano % 4 == 0 && (ano % 100 != 0 || ano % 400
+// == 0)).)
+// #include<stdio.h>
+
+// int bissexto(int n);
+// int main(void){
+//   int n=0;
+//   printf("Digite um ANO inteiro positivo: ");
+//   scanf("%d",&n);
+
+//   if(bissexto(n)==1){
+//     printf("Esse ano é bissexto!");
+//   }else{
+//     printf("Não é bissexto!");
+//   }
+  
+// }
+
+// int bissexto(int n){
+//   if(n%4==0&&(n%100!=0||n%400==0)){
+//     return 1;
+//   }else{
+//     return 0;
+//   }
+// }
+
+
+// Dada uma matriz Amxn, imprimir o número de linhas e o
+// número de colunas nulas da matriz.
+
+// Exemplo: m = 4 e n = 4
+
+// tem 2 linhas nulas e 1 coluna nula.
+// #include<stdio.h>
+// int main(void){
+//   int mat[4][4]={{1,0,2,3},{4,0,5,6},{0,0,0,0},{0,0,0,0}},i=0,j=0,somaL=0,somaC=0,qtdC=0,qtdL=0;
+  
+//   for(i=0;i<4;i++){
+//     somaC=0;
+//     for(j=0;j<4;j++){
+//       somaC=somaC+mat[i][j];
+//     }
+//     if(somaC==0){
+//       qtdL++;
+//     }
+//   }
+
+
+
+//   for(j=0;j<4;j++){
+//     somaL=0;
+//     for(i=0;i<4;i++){
+//       somaL=somaL+mat[i][j];
+//     }
+//     if(somaL==0){
+//       qtdC++;
+//     }
+//   }
+
+//   printf("A quantidade de linhas nulas é:%d; A quantidade de colunas nulas é:%d",qtdL,qtdC);
+// }
+
+
+// Escreva um programa que leia um inteiro não-negativo n e
+// imprima a soma dos n primeiros números primos.
+
+// #include<stdio.h>
+// int primo(int n);
+
+// int main(void){
+// int n=0,i=0,soma=0;
+
+//   printf("Digite um número inteiro: ");
+//   scanf("%d",&n);
+
+//   for(i=n-1;i>0;i--){
+//     if(primo(i)==1){
+//       soma=i+soma;
+   
+//     }
+//   }
+//   printf("A soma é:%d",soma);
+//   return 0;
+// }
+
+// int primo(int n){
+//   int i=0,qtd=0,soma=0;
+//   for(i=1;i<n;i++){
+//     if(n%i==0){
+//      soma=soma+i; 
+//     }
+//   }
+
+//   return soma;
+// }
+
+// Desenvolva um programa em C que receba duas
+// string de 10 posições e apresente o valor recebido e seus tamanhos correspondentes;
+
+// informe se o primeiro valor recebido é maior,
+// menor ou igual ao segundo;
+
+// apresente os valores lidos concatenados;
+
+// #include<stdio.h>
+// #include<string.h>
+// int main(void){
+//   char vet[10],str[10],vet2[20];
+  
+//   printf("Digite uma palavra: ");
+//   gets(vet);
+
+//   printf("Digite outra frase: ");
+//   gets(str);
+
+//   if(strcmp(vet,str)==0){
+//     printf("São iguais!");
+//   }else if(strcmp(vet,str)>0){
+//     printf("O primeiro valor é maior que o segundo\n");
+//   }else{
+//     printf("O segundo é maior que o primeiro\n");
+//   }
+  
+// strcat(vet2,vet);
+// strcat(vet2,str);
+
+//   printf("%s",vet2);
+  
+// }
+
+// Escrever uma função que recebe como argumentos uma cadeia
+// s e um caracter c, e que dá como resultado o número de vezes
+// que c aparece em s.
+
+// #include<stdio.h>
+// #include<string.h>
+
+// int vezes(char *str,char c);
+
+// int main(void){
+//   char str[60],c;
+//   printf("Digite uma frase: ");
+//   gets(str);
+
+//   printf("Digite uma letra: ");
+//   scanf(" %c",&c);
+
+//   printf("A quantidade de vezes que a letra apareceu foram:%d",vezes(str,c));
+// }
+
+// int vezes(char *str,char c){
+//   int i=0,tamanho=0,qtd=0;
+  
+//   tamanho=strlen(str);
+  
+//   for(i=0;i<tamanho;i++){
+//     if(str[i]==c){
+//       qtd++;
+//     }
+//   }
+//   return qtd;
+// }
+
+// Faça uma função que dadas 2 palavras, retorna o valor 1 se
+// elas são iguais e 0 se são diferentes.
+
+// #include<stdio.h>
+// #include<string.h>
+
+// int comp(char *str1, char *str2);
+// int main(void){
+//   char str1[50],str2[50];
+
+//   printf("Digite uma palavra: ");
+//   gets(str1);
+
+//   printf("Digite outra palavra: ");
+//   gets(str2);
+
+// if(comp(str1,str2)==1){
+//   printf("São iguais!");
+// }else{
+//   printf("São diferentes!");
+// }
+//   return 0;
+// }
+
+// int comp(char *str1, char *str2){
+// if(strcmp(str1,str2)==0){
+//   return 1;
+// }else{
+//   return 0;
+// }
+// }
+
+// Declare uma estrutura capaz de armazenar o número e 3
+// notas para um dado aluno.
+
+// #include<stdio.h>
+
+// struct aluno{
+// int n;
+// float n1,n2,n3;
+// };
+
+// typedef struct aluno aluno;
+
+// int main(void){
+// aluno aluno;
+
+// printf("Digite três notas: ");
+// scanf("%f %f %f",&aluno.n1,&aluno.n2,&aluno.n3);
+
+// printf("Digite um número inteiro: ");
+// scanf("%d",&aluno.n);
+
+// printf("As notas do aluno foram: %f ; %f ; %f . O número escolhido por ele foi: %d",aluno.n1,aluno.n2,aluno.n3,aluno.n);
+//   return 0;
+// }
+
+
+// Declare uma estrutura capaz de armazenar um número e as notas de av1 av2 e av3 e média para um dado aluno. Faça um programa leia estes valores e salve-os na estrutura. Por fim, mostre os valores na tela
+// #include<stdio.h>
+// struct notas{
+// float nota[3];
+// };
+
+// typedef struct notas notas;
+
+// int main(void){
+// notas notas;
+// int i=0;
+// float media=0;
+
+// for(i=0;i<3;i++){
+//   printf("Digite uma nota: ");
+//   scanf("%f",&notas.nota[i]);
+// }
+//   media=(notas.nota[0]+notas.nota[1]+notas.nota[2])/3;
+
+//   printf("A média final: %f",media);
+// }
+
+// #include <stdio.h>
+
+// struct ponto { float x; float y; };
+
+// typedef struct ponto ponto;
+
+// ponto lerPonto();
+
+// int main(){
+
+// ponto p = lerPonto();
+
+// printf("O ponto fornecido foi: (%.2f,%.2f)\n", p.x, p.y);
+
+// return 0;
+
+// }
+
+// ponto lerPonto(){
+
+// ponto tmp;
+
+// printf("Digite as coordenadas do ponto(x y): ");
+
+// scanf("%f %f", &tmp.x, &tmp.y);
+
+// return tmp;
+
+// }
+
+
+
+
+// #include <stdio.h>
+
+// struct dma{ int dia; int mes; int ano; };
+
+// typedef struct dma dma;
+
+// dma fimEvento(dma inicio, int dias);
+
+// int main(){
+
+// dma data;
+// int dias=0;
+
+// printf("Digite o dia, mês e ano: ");
+// scanf("%d %d %d",&data.dia, &data.mes, &data.ano);
+
+// printf("Digite a duração: ");
+// scanf("%d", &dias);
+
+// dma dataFim = fimEvento(data, dias);
+
+// printf("o evento acaba em %d / %d / %d \n",dataFim.dia,
+// dataFim.mes, dataFim.ano);
+
+// return 0;
+
+// }
+
+// //Calcula a data de fim de um evento ao receber a data de início do evento e a duração do evento em dias.
+
+// dma fimEvento(dma inicio, int dias){
+
+// dma dataFim;
+
+// dataFim.dia = 
+
+// }
+
+
+// Escreva uma função que receba um número inteiro que representa um intervalo de tempo medido em minutos e retorne uma estrutura equivalente de horas e minutos. ex: 131 minutos equivalem a 2 horas e 11 minutos. Use uma struct como a seguinte:
+// #include<stdio.h>
+// struct dma{
+// int h;
+// int m;
+// };
+// typedef struct dma dma;
+
+// dma calcular(int min);
+
+// int main(void){
+//   int min;
+
+//   printf("Digite a quantidade de minutos: ");
+//   scanf("%d",&min);
+
+//   dma total=calcular(min);
+
+//   printf("%d:%d",total.h,total.m);
+// }
+
+// dma calcular(int min){
+//   dma h;
+//   h.h=min/60;
+//   h.m=min%60;
+
+//   return h;
+// }
+
+
+
+// Faça um programa em C para receber 3 informações de cadastro, apresentar a informação de cada cadastro em linha e, ao final apresentar a média das idades.
+// #include<stdio.h>
+
+// struct cadastro{
+// char nome[50];
+// int idade;
+// char sexo;
+// };
+
+// typedef struct cadastro cadastro;
+
+// int main(void){
+//   cadastro cad[3];
+//   int i=0;
+//   for(i=0;i<3;i++){
+//     printf("Digite o nome: ");
+//     scanf("%s",cad[i].nome);
+
+//     printf("Digite a idade: ");
+//     scanf("%d",&cad[i].idade);
+
+//     printf("Digite o sexo: ");
+//     scanf(" %c",&cad[i].sexo);
+//   }
+
+//   for(i=0;i<3;i++){
+//     printf("Nome:%s; Idade:%d; Sexo:%c\n",cad[i].nome,cad[i].idade,cad[i].sexo);
+//   }
+// }
+
+// 1. Faça um programa em C para manipular registros de produtos, conforme a estrutura a seguir.
+// #include <stdio.h> 
+
+// struct produto
+// { int codigo;
+// char descricao[30];
+// float preco;
+// };
+
+// typedef struct produto produto;
+
+// // O programa deve:
+// // a) Declarar um vetor que armazene os 50 diferentes produtos com o lay-out da estrutura;
+// int main(void){
+//   produto pr[3];
+//   int i=0;
+//   float perc[3],pA[3];
+//   for(i=0;i<3;i++){
+//     printf("Digite o código do produto: ");
+//     scanf("%d",&pr[i].codigo);
+
+//     printf("Digite a descrição do produto: ");
+//     scanf("%s",pr[i].descricao);
+
+//     printf("Digite o preço do produto: ");
+//     scanf("%f",&pr[i].preco);
+
+//     pA[i]=pr[i].preco;
+
+
+//     printf("Digite o percentual de ajuste do preço: ");
+//     scanf("%f",&perc[i]);
+
+//     pr[i].preco=pr[i].preco*perc[i]+pr[i].preco;
+    
+//   }
+
+//   for(i=0;i<3;i++){
+//     printf("O código do produto foi: %d; A descrição do produto é:%s; O preço antes do produto foi:%.2f. O percentual foi de :%.2f; O preço depois do reajuste foi:%.2f\n",pr[i].codigo,pr[i].descricao,pA[i],perc[i],pr[i].preco);
+//   }
+  
+// }
+
+// 2. Foi feita uma pesquisa visando identificar as características físicas da população de uma região,
+// coletando-se os seguintes dados dos seus habitantes:
+// ü sexo ( M ou F );
+// ü cor dos olhos ( azul, verde, castanho);
+// ü cor dos cabelos ( louro, castanho, preto, ruivo );
+// ü idade.
+// Faça um programa que leia estes dados de um conjunto desconhecido de habitantes, calcule e imprima:
+// ü homem mais novo;
+// ü número de pessoas entrevistadas;
+// ü idade média das mulheres;
+// ü percentagem de habitantes de cabelos louros e olhos azuis.
+
+// #include<stdio.h>
+// #include<string.h>
+
+// struct carac{
+// char sexo;
+// char olhos[50];
+// char cabelo[50];
+// int idade;
+// };
+
+// typedef struct carac carac;
+
+// int main(void){
+//   carac c[3];
+//   int i=0,qtd=0,qtdM=0,soma=0;
+//   float media=0,media2=0,qtdLA=0;
+//   for(i=0;i<3;i++){
+//     printf("Digite o sexo:(m ou f) ");
+//     scanf(" %c",&c[i].sexo);
+
+//     printf("Digite a cor dos olhos: ( azul, verde, castanho) ");
+//     scanf("%s",c[i].olhos);
+
+//     printf("Digite a cor do cabelo: ( louro, castanho, preto, ruivo ) ");
+//     scanf("%s",c[i].cabelo);
+
+//     printf("Digite a idade: ");
+//     scanf("%d",&c[i].idade);
+//      qtd++;
+//     if(c[i].sexo=='f'){
+//       qtdM++;
+//     }
+//   }
+//  int  menor=c[0].idade;
+//   for(i=0;i<3;i++){
+//     if(c[i].idade<menor&&c[i].sexo=='m'){
+//       menor=c[i].idade;
+//     }if(c[i].sexo=='f'){
+//       soma=soma+c[i].idade;
+//     }if(strcmp(c[i].olhos,"azul")==0 && strcmp(c[i].cabelo,"louro")==0){
+//       qtdLA++;
+//     }
+//   }
+// media=soma/qtdM;
+// media2=qtdLA/qtd;
+//   printf("O home mais novo é: %d; O número de pessoas entrevistadas foi de:%d; A idade média das mulheres é:%.2f; A percentagem de louros e olhos azuis é:%.2f", menor,qtd, media,media2);
+// }
+
+
+// Fazer um programa que lê valores para uma matriz do tipo "float"de 5 linhas por 3 colunas e imprime a diferença entre a média dos elementos das colunas pares e a média dos elementos das linhas ímpares.
+
+// #include<stdio.h>
+
+// int main(void){
+//   float mat[5][3],media=0,dif=0,par=0,impar=0,somaP=0,somaI=0,qtdP=0,qtdI=0,mediaI=0,mediaP=0;
+//   int i=0,j=0;
+
+//   for(i=0;i<5;i++){
+//     for(j=0;j<3;j++){
+//       printf("Digite um número: ");
+//       scanf("%f",&mat[i][j]);
+//     }
+//     if(i%2!=0){
+//       somaP=somaP+mat[i][j];
+//       qtdP++;
+//     }
+//   }
+
+//     for(j=0;j<3;j++){
+//     for(i=0;i<5;i++){
+//      if(j%2==0){
+//        somaI=somaI+mat[i][j];
+//        qtdI++;
+//      }
+//     }
+//   }
+// mediaI=somaI/qtdI;
+// mediaP=somaP/qtdP;
+
+// dif=mediaP-mediaI;
+
+//   printf("A diferença é :%f",dif);
+// }
+
+// 5. Fazer uma rotina que aguarda um string do teclado e retorna o valor 1 se ostring digitado foi "SIM" e 0 se o string digitado foi "NAO". A rotina só deve retornar alguma coisa se o string digitado for "SIM" ou "NAO".
+// #include<stdio.h>
+// #include<string.h>
+
+// int retorno(char *str);
+// int main(void){
+//   char str[5];
+//   printf("Digite SIM ou NAO: " );
+//   gets(str);
+
+//   printf("%d",retorno(str));
+//   return 0;
+// }
+//   int retorno(char *str){
+//     if(strcmp(str,"SIM")==0){
+//       return 1;
+//     }else if(strcmp(str,"NAO")==0){
+//       return 0;
+//     }
+//   }
+// 6. Fazer uma rotina que recebe um string como parâmetro e imprime quantas palavras (separadas por espaços em branco) o mesmo contém.
+
+// #include<stdio.h>
+// #include<string.h>
+//   int func(char *str);
+//   int main(void){
+//     char str[50];
+//     printf("Escreva uma frase:");
+//     gets(str);
+// printf("Existem %d palavras separadas por espaço em branco.",func(str));
+//   return 0;    
+//   }
+
+//   int func(char *str){
+//     int i=0,tamanho=0,qtd=0;
+//     tamanho=strlen(str);
+    
+//     for(i=0;i<tamanho;i++){
+//       if(str[i]==' '){
+//         qtd++;
+//       }
+//     }
+//     return qtd;
+//   }
+
+// Grupo VIII - Passagem de parâmetros e estruturas
+// 1. Fazer uma função que retorna a soma, a diferença e o produto entre dois números.
+// #include<stdio.h>
+
+// void func(int *soma, int *dif, int *prod, int n1, int n2);
+// int main(void){
+//   int soma=0,dif=0,prod=0,n1=0,n2=0;
+
+//   printf("Digite um número: ");
+//   scanf("%d",&n1);
+
+//   printf("Digite outro número: ");
+//   scanf("%d",&n2);
+
+//   func(&soma,&dif,&prod,n1,n2);
+
+//   printf("O resultado da soma é:%d; Diferença é:%d; Produto é:%d",soma,dif,prod);
+  
+//   return 0;
+// }
+
+// void func(int *soma, int *dif, int *prod, int n1, int n2){
+//   *soma=n1+n2;
+//   *dif=n1-n2;
+//   *prod=n1*n2;
+// }
+
+// 2. Fazer uma função em "C" que retorna a razão entre dois números. A função deve retornar pelo comando return o valor 1 se a operação foi possível e o  valor 0 se a operação não foi possível (divisão por zero, por exemplo). O resultado da divisão deve retonar por um parâmetro por referência.
+// #include<stdio.h>
+
+// int func(float n1, float n2, float *razao);
+
+// int main(void){
+// float n1=0,n2=0;
+// float razao=0;
+//   printf("Digite um número: ");
+//   scanf("%f",&n1);
+
+//   printf("Digite outro número: ");
+//   scanf("%f",&n2);
+
+//   if(func(n1,n2,&razao)==1){
+//     printf("A razão dos dois números é:%.2f",razao);
+//   }else if(func(n1,n2,&razao)==0){
+//     printf("Não é possível dividir.");
+//   }
+//   return 0;
+// }
+// int func(float n1, float n2, float *razao){
+
+//   if(n2==0){
+//     return 0;
+//   }else{
+//   *razao=n1/n2;
+//     return 1;
+//   }
+// }
+
+// 3. Fazer uma rotina em "C" que recebe um vetor de números inteiros como
+// parâmetro onde todos os valores exceto o último são positivos e devolve:
+// - a média dos valores do vetor;
+// - o menor valor do vetor (sem considerar o último)
+// - o maior valor do vetor
+// #include<stdio.h>
+
+// void funcao(int *vet, float *media, int *menor,int *maior);
+// int main(void){
+//   int vet[3],i=0;
+//   float media;
+//   for(i=0;i<3;i++){
+//     printf("Digite um número, sendo o último negativo: ");
+//     scanf("%d",&vet[i]);
+//   }
+//   int menor=vet[0];
+//   int maior=vet[0];
+
+//   funcao(vet,&media,&menor,&maior);
+//   printf("Média:%f ; Menor(sem contar o último): %d; Maior:%d",media,menor,maior);
+// }
+
+// void funcao(int *vet, float *media, int *menor,int *maior){ 
+//   int i=0;
+//   float soma=0;
+//   for(i=0;i<3;i++){
+//   soma=soma+vet[i];
+//     if(vet[i]>*maior){
+//       *maior=vet[i];
+//     }if(vet[i]<*menor&&vet[i]!=vet[2]){
+//       *menor=vet[i];
+//     }
+//   }
+//   *media=soma/3;
+// }
+// 4. Fazer uma função para ler e retornar o valor das 3 notas de um aluno.
+
+// 5. Construir um programa em "C" que implementa uma agenda eletrônica. O
+// programa deve ter um menu com as seguintes opções:
+// • Entrar um novo nome na agenda.
+// • Imprimir na tela os dados de uma das pessoas cadastradas (conforme
+// solicitação).
+// • Imprimir a lista de nomes cadastrados que comecem pela letra indicada.
+// • Fim
+// Cada entrada da agenda deve ter os seguintes campos:
+// char nome[30];
+// char endereco[100];
+// char fone[10];
+// long int CEP;
+// Obs: a agenda deve ter capacidade para 100 entradas.
+#include<stdio.h>
+
+struct agenda{
+char nome[30];
+char endereco[100];
+char fone[10];
+long int CEP;
+};
+
+typedef struct agenda agenda;
+
+int main(void){
+agenda ag[100];
+  int i=0;
+  char letra;
+  for(i=0;i<3;i++){
+  printf("Digite o nome: ");
+  scanf("%s",ag[i].nome);
+
+  printf("Digite o endereço: ");
+    scanf("%s",ag[i].endereco);
+
+  printf("Digite o tel: ");
+    scanf("%s",ag[i].fone);
+
+  printf("Digite o CEP: ");
+    scanf("%li",&ag[i].CEP);
+  }
+
+    for(i=0;i<3;i++){
+printf("Nome: %s; Endereço:%s; Telefone:%s; CEP:%li\n",ag[i].nome,ag[i].endereco,ag[i].fone,ag[i].CEP);
+  }
+printf("Digite uma letra: ");
+  scanf(" %c",&letra);
+      for(i=0;i<3;i++){
+  if(ag[i].nome[0]==letra){
+    printf("%s\n",ag[i].nome);
+  }
+  }
+  return 0;
+}
+
